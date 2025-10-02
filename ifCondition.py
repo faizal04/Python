@@ -16,3 +16,9 @@ if age1>age2 or age2<age1:
     print("you are older than your friend",age2-age1)
 else:
     print("your friend is older than you by",age2-age1,"years")
+
+
+
+# in python == is same as === in js 
+#e.g
+print(5=="5")
