@@ -1,11 +1,8 @@
-listInTwoDimension = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-]
-print(listInTwoDimension)
 
-print(listInTwoDimension[0])
+x = int(input("enter the integer"))
+try:
+    print("hwllow world"+x)
+except (ValueError,TypeError) as e:
+    print("something went wrong \n ", e)
 
-
-print(listInTwoDimension[0][1])
+        
