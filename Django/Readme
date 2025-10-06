@@ -1,0 +1,90 @@
+Django Development Setup on Windows + PowerShell
+
+This README explains how to set up and work with Python virtual environments for Django projects on Windows using PowerShell. It also covers activating existing environments and running the Django server.
+
+1. Prerequisites
+
+Python installed (preferably Python 3.10+).
+
+PowerShell (comes with Windows).
+
+Basic knowledge of Python and command line.
+
+Check Python version:
+
+python --version
+
+2. Create a New Django Project
+   Step 1: Navigate to your project folder
+   cd D:\code\Backend\Python\Django
+
+Step 2: Create a virtual environment
+python -m venv myapp
+
+myapp is the name of your virtual environment.
+
+This creates a folder myapp with its own Python and pip.
+
+Step 3: Allow PowerShell to run scripts (first time only)
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+This allows PowerShell to run local scripts safely.
+
+Step 4: Activate the virtual environment
+.\myapp\Scripts\Activate.ps1
+
+Your prompt will now show (myapp) at the start.
+
+If you see this, the environment is active.
+
+Step 5: Verify the Python path
+where python
+
+Should point to:
+
+D:\code\Backend\Python\Django\myapp\Scripts\python.exe
+
+Step 6: Install Django
+pip install django
+
+Step 7: Start a new Django project
+django-admin startproject myproject
+cd myproject
+python manage.py runserver
+
+Open http://127.0.0.1:8000/ in your browser to see the Django welcome page.
+
+3. Working on an Existing Project
+   Step 1: Navigate to your project folder
+   cd D:\code\Backend\Python\Django\myproject
+
+Step 2: Activate the virtual environment
+.\myapp\Scripts\Activate.ps1
+
+(myapp) should appear in the prompt.
+
+Step 3: Install any required packages
+pip install -r requirements.txt
+
+Only needed if the project has a requirements.txt.
+
+Step 4: Run the Django server
+python manage.py runserver
+
+Server will start at http://127.0.0.1:8000/.
+
+4. Check if the Virtual Environment is Active
+
+Prompt shows (myapp) at the start.
+
+Run:
+
+where python
+
+Should point to the virtual environment’s Python.
+
+Run:
+
+pip list
+
+Shows installed packages in this environment.
