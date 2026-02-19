@@ -1,0 +1,4 @@
+from OOPs import person
+
+p21 = person("Suhail kahnday",20,5,5,8825055921)
+print(p21)
